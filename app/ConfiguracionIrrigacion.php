@@ -10,6 +10,6 @@ class ConfiguracionIrrigacion extends Model
 {
     use SoftDeletes;
     protected $table = 'configuracion-irrigacion';
-    protected $dates = ['deleted_at'];
+    protected $casts = ['deleted_at' => 'datetime'];
     protected $hidden = ['created_at','updated_at','deleted_at'];
 }

@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Input;
 use Excel;
 use App\Curso;
 use App\Person;
@@ -44,8 +43,8 @@ class ExcelController extends Controller
 	{
         ini_set('memory_limit', -1);
         ini_set('max_execution_time', 0);
-		if(Input::hasFile('import_file')){
-			$path = Input::file('import_file')->getRealPath();
+		if(request()->hasFile('import_file')){
+			$path = request()->file('import_file')->getRealPath();
 			$data = Excel::load($path, function($reader) {
 
 			})->get();
@@ -93,8 +92,8 @@ class ExcelController extends Controller
     {
         ini_set('memory_limit', -1);
         ini_set('max_execution_time', 0);
-        if(Input::hasFile('import_file')){
-            $path = Input::file('import_file')->getRealPath();
+        if(request()->hasFile('import_file')){
+            $path = request()->file('import_file')->getRealPath();
             $data = Excel::load($path, function($reader) {
 
             })->get();
@@ -158,8 +157,8 @@ class ExcelController extends Controller
     {
         ini_set('memory_limit', -1);
         ini_set('max_execution_time', 0);
-        if(Input::hasFile('import_file')){
-            $path = Input::file('import_file')->getRealPath();
+        if(request()->hasFile('import_file')){
+            $path = request()->file('import_file')->getRealPath();
             $data = Excel::load($path, function($reader) {
 
             })->get();

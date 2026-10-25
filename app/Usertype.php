@@ -9,7 +9,7 @@ class Usertype extends Model
 {
 	use SoftDeletes;
     protected $table = 'usertype';
-    protected $dates = ['deleted_at'];
+    protected $casts = ['deleted_at' => 'datetime'];
 
     /**
      * Método para listar
