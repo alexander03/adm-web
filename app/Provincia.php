@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Provincia extends Model
 {
     protected $table = 'provincia';
-    protected $dates = ['deleted_at'];
+    protected $casts = ['deleted_at' => 'datetime'];
 
      /**
      * método para obtener las distritos hijas

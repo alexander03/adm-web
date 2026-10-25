@@ -9,7 +9,7 @@ class Rolpersona extends Model
 {
 	 use SoftDeletes;
     protected $table = 'rolpersona';
-    protected $dates = ['deleted_at'];
+    protected $casts = ['deleted_at' => 'datetime'];
 
 
     public function person(){

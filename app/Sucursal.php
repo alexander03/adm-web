@@ -10,7 +10,7 @@ class Sucursal extends Model
 {
     use SoftDeletes;
     protected $table = 'sucursal';
-    protected $dates = ['deleted_at'];
+    protected $casts = ['deleted_at' => 'datetime'];
 
     public function empresa()
     {

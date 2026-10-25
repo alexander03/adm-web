@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class Distrito extends Model
 {
     protected $table = 'distrito';
-    protected $dates = ['deleted_at'];
+    protected $casts = ['deleted_at' => 'datetime'];
 }
